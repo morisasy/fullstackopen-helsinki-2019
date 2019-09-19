@@ -16,8 +16,7 @@ const App = (props) => {
     document.getElementById('root'))
   }
   
-  refresh()
-  counter += 1
-  refresh()
-  counter += 1
-  refresh()
+  setInterval(() => {
+    refresh()
+    counter += 1
+  }, 1000)
