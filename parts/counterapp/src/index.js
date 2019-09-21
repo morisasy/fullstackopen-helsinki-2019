@@ -13,6 +13,9 @@ const App = (props) => {
       <button onClick={handleClick}>
         plus
       </button>
+      <button onClick={() => setCounter(0)}> 
+        zero
+      </button>
     </div>
   )
 }
