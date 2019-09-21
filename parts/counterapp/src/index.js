@@ -6,14 +6,22 @@ const App = (props) => {
 
   const setToValue = (value) => setCounter(value);
 
+  /* const setToValue = (value) => {
+    return () => {
+      setCounter(value)
+    }
+  }
+  const setToValue = (value) => () => setCounter(value)
+  */
+
   return (
     <div>
       <div>{counter}</div>
-      <button onClick={setToValue(counter + 1)}>
-        plus
+      <button onClick={() => setToValue(counter + 1)}>
+        Plus
       </button>
-      <button onClick={setToValue(0)}>
-        zero
+      <button onClick={() => setToValue(0)}>
+        Zero
       </button>
     </div>
   )
