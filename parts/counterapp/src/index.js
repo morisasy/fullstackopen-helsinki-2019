@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
-cconst App = (props) => {
+const App = (props) => {
   const [left, setLeft] = useState(0)
   const [right, setRight] = useState(0)
 
