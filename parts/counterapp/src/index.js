@@ -7,20 +7,21 @@ const App = (props) => {
   })
 
   const handleLeftClick = () => {
-    const newClicks = { 
-      left: clicks.left + 1, 
-      right: clicks.right 
+    const handleLeftClick = () => {
+      const newClicks = { 
+        ...clicks, 
+        left: clicks.left + 1 
+      }
+      setClicks(newClicks)
     }
-    setClicks(newClicks)
-  }
-
-  const handleRightClick = () => {
-    const newClicks = { 
-      left: clicks.left, 
-      right: clicks.right + 1 
+    
+    const handleRightClick = () => {
+      const newClicks = { 
+        ...clicks, 
+        right: clicks.right + 1 
+      }
+      setClicks(newClicks)
     }
-    setClicks(newClicks)
-  }
 
   return (
     <div>
