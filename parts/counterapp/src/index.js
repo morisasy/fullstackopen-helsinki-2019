@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
-
 const History = (props) => {
   if (props.allClicks.length === 0) {
     return (
@@ -17,6 +16,12 @@ const History = (props) => {
     </div>
   )
 }
+
+const Button = ({ onClick, text }) => (
+  <button onClick={onClick}>
+    {text}
+  </button>
+)
 
 const App = (props) => {
   const [left, setLeft] = useState(0)
@@ -35,14 +40,14 @@ const App = (props) => {
 
   return (
     <div>
-    <div>
-      {left}
-      <button onClick={handleLeftClick}>left</button>
-      <button onClick={handleRightClick}>right</button>
-      {right}
-      <History allClicks={allClicks} />
+      <div>
+        {left}
+        <Button onClick={handleLeftClick} text='left' />
+        <Button onClick={handleRightClick} text='right' />
+        {right}
+        <History allClicks={allClicks} />
+      </div>
     </div>
-  </div>
   )
 }
 
