@@ -6,7 +6,6 @@ const App = (props) => {
     left: 0, right: 0
   })
 
-  const handleLeftClick = () => {
     const handleLeftClick = () => {
       const newClicks = { 
         ...clicks, 
